@@ -103,10 +103,10 @@ class AutoCompleteSearchState extends State<AutoCompleteSearch> {
         ? ChangeNotifierProvider.value(
             value: provider,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               child: RoundedFrame(
                 height: 50,
-                padding: const EdgeInsets.only(right: 10,top: 10),
+                padding: const EdgeInsets.only(right: 10, top: 10),
                 // color: Theme.of(context).brightness == Brightness.dark
                 //     ? Colors.black54
                 //     : Colors.white,
@@ -253,7 +253,7 @@ class AutoCompleteSearchState extends State<AutoCompleteSearch> {
       ),
     );
 
-    Overlay.of(context)!.insert(overlayEntry!);
+    Overlay.of(context).insert(overlayEntry!);
   }
 
   Widget _buildSearchingOverlay() {

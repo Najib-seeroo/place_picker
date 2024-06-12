@@ -1,11 +1,9 @@
 import 'dart:async';
 
-import 'package:flutter/material.dart';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
-
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_webservice/geocoding.dart';
 import 'package:google_maps_webservice/places.dart';
@@ -27,8 +25,6 @@ typedef PinBuilder = Widget Function(
   BuildContext context,
   PinState state,
 );
-
-
 
 class GoogleMapPlacePicker extends StatelessWidget {
   const GoogleMapPlacePicker({
@@ -496,7 +492,7 @@ class GoogleMapPlacePicker extends StatelessWidget {
                 result.geometry!.location.lat,
                 result.geometry!.location.lng) <=
             pickArea!.radius;
-    MaterialStateColor buttonColor = MaterialStateColor.resolveWith(
+    WidgetStateColor buttonColor = WidgetStateColor.resolveWith(
         (states) => canBePicked ? Colors.lightGreen : Colors.red);
     return Container(
       margin: EdgeInsets.all(10),

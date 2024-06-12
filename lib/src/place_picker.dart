@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io' show Platform;
 
 import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
@@ -7,8 +8,6 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:google_maps_webservice/places.dart';
 import 'package:http/http.dart';
 import 'package:provider/provider.dart';
-import 'dart:io' show Platform;
-
 import 'package:uuid/uuid.dart';
 
 import '../google_maps_place_picker.dart';
@@ -319,7 +318,7 @@ class _PlacePickerState extends State<PlacePicker> {
               children.addAll([
                 Icon(
                   Icons.error_outline,
-                  color: Theme.of(context).errorColor,
+                  color: Theme.of(context).colorScheme.error,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 16),
