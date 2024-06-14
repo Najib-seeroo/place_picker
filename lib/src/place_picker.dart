@@ -319,7 +319,7 @@ class _PlacePickerState extends State<PlacePicker> {
               children.addAll([
                 Icon(
                   Icons.error_outline,
-                  color: Theme.of(context).errorColor,
+                  // color: Theme.of(context).errorColor,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 16),
